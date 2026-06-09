@@ -98,7 +98,10 @@ async def main():
                 messages.append(ToolMessage(content=tool_result, tool_call_id=tool_call["id"]))
 
         final_response = await llm_with_tools.ainvoke(messages)
-        print(f"\nKet qua:\n{final_response.content}")
+        answer = final_response.content.strip()
+        if not answer:
+            answer = "\n".join(message.content for message in messages if isinstance(message, ToolMessage))
+        print(f"\nKet qua:\n{answer}")
     else:
         print(f"\nKet qua:\n{response.content}")
 
