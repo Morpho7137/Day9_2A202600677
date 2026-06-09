@@ -1,0 +1,9 @@
+{
+  "embedding_model": "Quockhanh05/Vietnam_legal_embeddings",
+  "embedding_dim": 768,
+  "chunk_size": 1200,
+  "chunk_overlap": 120,
+  "chunking_method": "custom_legal_sections",
+  "vector_store": "local_disk",
+  "num_chunks": 619
+}

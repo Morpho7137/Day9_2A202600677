@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+Day08_RAG_pipeline_cohort2/
+tmp_*.html
+
+group_project/web/node_modules/
+group_project/web/dist/
